@@ -19,11 +19,14 @@ jekyll serve
 4. Now browse to [http://localhost:4000](http://localhost:4000)
 
 ## Dynamic content
-We use Google Spreadsheets as a CMS. 
+We use Google Spreadsheets as a CMS.
 
-### Sponsors
+### Sponsor
 1. Include the sponsor's logo in ```img/sponsor/``` using the file manager in cPanel or your Client FTP;
 2. Fill out the sponsor information in [this spreadsheet](https://docs.google.com/spreadsheets/d/1Cu9buu8ibZl048JUK0hSiuPrN95qbIdNQbTICA2m5L8/edit#gid=47337489).
 
-### Speakers
+### Speaker
 Coming soon.
+
+## Deploy
+Jekyll compiles all project files on ```/_site/```. Use your file manager in cPanel or your Client FTP to keep your hosted project identical to```/_site/```.
