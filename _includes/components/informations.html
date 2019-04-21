@@ -1,0 +1,21 @@
+<section id="informations" class="informations">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-1">
+        <div class="informations-content">
+          <h2>Fale conosco</h2>
+          <p><span class="bold">R. Frei Caneca, 569 Consolação,</span> São Paulo - SP</p>
+          <a class="mail-contact" href="mailto:contato@productcamp.com.br" target="_blank"><span class="bold">contato</span>@productcamp.com.br</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDvWEJ9u0w4TpUkCuTNiJ-lRI75FlfTVsw'></script>
+    <div class="gmap-container">
+      <div id='gmap_canvas'></div>
+      <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+    </div>
+    <script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(-23.5541384,-46.65478),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-23.5541384,-46.65478)});infowindow = new google.maps.InfoWindow({content:'<strong>Frei Caneca Shopping</strong><br>R. Frei Caneca, 569 Consolação<br> São Paulo - SP'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+  </div>
+</section>
