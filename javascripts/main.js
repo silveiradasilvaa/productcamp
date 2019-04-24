@@ -30,7 +30,7 @@ $(document).ready(function() {
     if( target.length ) {
       event.preventDefault();
       $('html, body').animate({
-          scrollTop: target.offset().top - 120
+          scrollTop: target.offset().top - 82
       }, 500);
     }
   });
