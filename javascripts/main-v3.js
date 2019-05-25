@@ -88,12 +88,14 @@ $(document).ready(function() {
 			keynote_html += '\
 			<div class="col-lg-3 col-md-6">\
 				<div class="keynote-container">\
-					<img src="/img/speakers/' + values[i][3] + '" class="img-fluid" alt="' + values[i][0] + ',' + values[i][1] + ' na ' + values[i][2] + '">\
-					<div class="keynote-info">\
-						<span class="label-track label-track-keynote">Keynote</span>\
-						<h3>' + values[i][0] + '</h3>\
-						<p>' + values[i][1] + ' na ' + values[i][2] + '</p>\
-					</div>\
+					<a href="' + values[i][4] + '" target="_blank">\
+						<img src="/img/speakers/' + values[i][3] + '" class="img-fluid" alt="' + values[i][0] + ',' + values[i][1] + ' na ' + values[i][2] + '">\
+						<div class="keynote-info">\
+							<span class="label-track label-track-keynote">Keynote</span>\
+							<h3>' + values[i][0] + '</h3>\
+							<p>' + values[i][1] + ' na ' + values[i][2] + '</p>\
+						</div>\
+					</a>\
 				</div>\
 			</div>';
 		}
@@ -105,11 +107,13 @@ $(document).ready(function() {
 			speakers_html += '\
 			<div class="col-lg-3 col-md-4 col-sm-6 col-12">\
 				<div class="speaker-container">\
-					<img src="/img/speakers/' + values[i][3] + '" class="img-fluid" alt="' + values[i][0] + ',' + values[i][1] + ' na ' + values[i][2] + '">\
-					<div class="speaker-info">\
-						<h3>' + values[i][0] + '</h3>\
-						<p>' + values[i][1] + ' na ' + values[i][2] + '</p>\
-					</div>\
+					<a href="' + values[i][4] + '" target="_blank">\
+						<img src="/img/speakers/' + values[i][3] + '" class="img-fluid" alt="' + values[i][0] + ',' + values[i][1] + ' na ' + values[i][2] + '">\
+						<div class="speaker-info">\
+							<h3>' + values[i][0] + '</h3>\
+							<p>' + values[i][1] + ' na ' + values[i][2] + '</p>\
+						</div>\
+					</a>\
 				</div>\
 			</div>';
 		}
