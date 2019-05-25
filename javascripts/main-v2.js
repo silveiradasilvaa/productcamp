@@ -35,13 +35,42 @@ $(document).ready(function() {
     }
   });
 
+	// to top right away
+	if ( window.location.hash ) scroll(0,0);
+	// void some browsers issue
+	setTimeout( function() { scroll(0,0); }, 1);
+
+	$(function() {
+
+	    // your current click function
+	    $('.scroll').on('click', function(e) {
+	        e.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: $($(this).attr('href')).offset().top + 'px'
+	        }, 1000, 'swing');
+	    });
+
+	    // *only* if we have anchor on the url
+	    if(window.location.hash) {
+
+	        // smooth scroll to the anchor id
+	        $('html, body').animate({
+	            scrollTop: $(window.location.hash).offset().top + 'px'
+	        }, 1000, 'swing');
+	    }
+
+	});
+
 });
+
 
 
 $( document ).ready(function() {
   var sponsors_t1_html = '';
   var sponsors_t2_html = '';
   var last_edition_html = '';
+  var keynote_html = '';
+	var speakers_html = '';
   $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1Cu9buu8ibZl048JUK0hSiuPrN95qbIdNQbTICA2m5L8/values/Sponsors_Tier01?key=AIzaSyB7TU0ePqNvWdrxrBdMGs9_HjnNThGP9Ns', function(data) {
     var values = data.values;
     for (var i = 1 ; i < values.length ; i++) {
@@ -79,5 +108,38 @@ $( document ).ready(function() {
 			</div>';
     }
     $('#last_edition').html(last_edition_html);
+  });
+  $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1Cu9buu8ibZl048JUK0hSiuPrN95qbIdNQbTICA2m5L8/values/Keynotes?key=AIzaSyB7TU0ePqNvWdrxrBdMGs9_HjnNThGP9Ns', function(data) {
+    var values = data.values;
+    for (var i = 1 ; i < values.length ; i++) {
+      keynote_html += '\
+			<div class="col-lg-3 col-md-6">\
+				<div class="keynote-container">\
+					<img src="/img/speakers/' + values[i][3] + '" class="img-fluid" alt="' + values[i][0] + ',' + values[i][1] + ' na ' + values[i][2] + '">\
+					<div class="keynote-info">\
+						<span class="label-track label-track-keynote">Keynote</span>\
+						<h3>' + values[i][0] + '</h3>\
+						<p>' + values[i][1] + ' na ' + values[i][2] + '</p>\
+					</div>\
+				</div>\ 
+			</div>';
+    }
+    $('#keynote').html(keynote_html);
+  });
+  $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1Cu9buu8ibZl048JUK0hSiuPrN95qbIdNQbTICA2m5L8/values/Speakers?key=AIzaSyB7TU0ePqNvWdrxrBdMGs9_HjnNThGP9Ns', function(data) {
+    var values = data.values;
+    for (var i = 1 ; i < values.length ; i++) {
+      speakers_html += '\
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12">\
+				<div class="speaker-container">\
+					<img src="/img/speakers/' + values[i][3] + '" class="img-fluid" alt="' + values[i][0] + ',' + values[i][1] + ' na ' + values[i][2] + '">\
+					<div class="speaker-info">\
+						<h3>' + values[i][0] + '</h3>\
+						<p>' + values[i][1] + ' na ' + values[i][2] + '</p>\
+					</div>\
+				</div>\
+			</div>';
+    }
+    $('#speakers').html(speakers_html);
   });
 });

@@ -10,9 +10,38 @@
 }
 
 @mixin pddSection() {
-  padding: 140px 0;
+  padding: 120px 0;
   @include media-breakpoint-down(md) {
     padding: 90px 0;
+  }
+}
+@mixin h2small() {
+  h2{
+    text-align: center;
+    font-family: "foxlite_scriptregular";
+    font-size: $vunity * 12;
+    line-height: $vunity * 7;
+    margin: 0 auto;
+    margin-bottom: $vunity * 5;
+    @include media-breakpoint-down(md) {
+      font-size: $vunity * 8;
+      line-height: $vunity * 5;
+    }
+    small{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      display: block;
+      line-height: $vunity * 4;
+      margin: 0 auto;
+      margin-top: $vunity * 3;
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+        line-height: $vunity * 4;
+      }
+      span{
+        font-weight: bold;
+      }
+    }
   }
 }
 
@@ -241,7 +270,9 @@ h1, h2, h3, h4, h5, h6{
 .showcase{
   width: 100%;
   min-height: 100vh;
-  background: $secondary;
+  // background: $secondary;
+  background: rgb(65,49,82);
+  background: linear-gradient(180deg, rgba(65,49,82,1) 0%, rgba(25,13,33,1) 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -271,13 +302,13 @@ h1, h2, h3, h4, h5, h6{
       flex-direction: column;
       height: 100%;
       h1{
-        font-family: "foxlite_scriptregular";
+        font-family: 'Open Sans', sans-serif;
         color: #fff;
-        font-size: $vunity * 14;
-        line-height: $vunity * 12;
+        font-size: $vunity * 6;
+        line-height: $vunity * 8;
         max-width: 500px;
         span{
-          color: $primary;
+          font-weight: bold;
         }
         small{
           font-family: 'Open Sans', sans-serif;
@@ -295,15 +326,15 @@ h1, h2, h3, h4, h5, h6{
       }
       @include media-breakpoint-down(md) {
         h1{
-          font-size: $vunity * 10;
-          line-height: $vunity * 8;
+          font-size: $vunity * 4;
+          line-height: $vunity * 6;
         }
       }
       @include media-breakpoint-down(sm) {
         text-align: center;
         align-items: center;
         h1{
-          font-size: $vunity * 8;
+          font-size: $vunity * 4;
           line-height: $vunity * 6;
         }
         .date-pcamp{
@@ -339,7 +370,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .highlights{
-  background: #fff;
+  background: #F5F5F5;
   padding: $vunity * 7 0;
   ul{
     width: 100%;
@@ -539,14 +570,7 @@ h1, h2, h3, h4, h5, h6{
 
 .partners{
   @include pddSection;
-  h2{
-    font-family: 'foxlite_scriptregular';
-    font-size: $vunity * 10;
-    text-align: center;
-    @include media-breakpoint-down(md) {
-      font-size: $vunity * 8;
-    }
-  }
+  @include h2small;
   .tier{
     h3{
       text-align: center;
@@ -781,7 +805,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .know-first{
-  padding: 60px 0;
+  @include pddSection;
   background: #2B1E39;
   h2{
     font-family: "foxlite_scriptregular";
@@ -808,4 +832,121 @@ h1, h2, h3, h4, h5, h6{
   .btn{
     width: 100%;
   }
+}
+
+.concept{
+  padding: 0 0 140px 0;
+  h2{
+    font-family: "foxlite_scriptregular";
+    color: #fff;
+    font-size: $vunity * 14;
+    line-height: $vunity * 12;
+    max-width: 500px;
+    span{
+      color: $primary;
+    }
+  }
+  h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+  }
+  p{
+    font-size: 16px;
+    color: #fff;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    h2{
+      font-size: $vunity * 10;
+      line-height: $vunity * 8;
+      text-align: center;
+      margin-bottom: $vunity * 4;
+      max-width: 100%;
+    }
+    h3{
+      text-align: center;
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
+
+.speakers{
+  @include pddSection;
+  background: #190D21;
+  h2{
+    font-family: 'foxlite_scriptregular';
+    font-size: $vunity * 10;
+    line-height: $vunity * 5;
+    text-align: center;
+    margin-bottom: $vunity * 6;
+    color: #fff;
+  }
+  .keynote{
+    img{
+      border-radius: 4px;
+    }
+    .keynote-info{
+      position: relative;
+      top: -20px;
+      padding: 0 10px 10px 10px;
+      .label-track{
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 4px;
+        &.label-track-keynote{
+          background: $primary;
+        }
+      }
+      h3{
+        margin-top: $vunity;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+      }
+      p{
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
+  .all-speakers{
+    .speaker-container{
+      max-width: 170px;
+      margin: 0 auto;
+      img{
+        border-radius: 4px;
+      }
+      .speaker-info{
+        margin-bottom: $vunity * 4;
+        h3{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.btn-outline-primary{
+  &.white{
+    color: #fff;
+  }
+}
+
+.tickets{
+  @include pddSection;
+  @include h2small;
+  background: $gray-200;
 }

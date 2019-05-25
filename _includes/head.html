@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "{{base}}/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "{{base}}/css/main-v5.css" | prepend: site.baseurl }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <meta property="og:type" content="website">
@@ -16,6 +16,8 @@
   <meta property="og:url" content="https://www.productcamp.com.br/">
   <meta property="og:image" content="{{base}}/img/og.png">
   <meta property="og:locale" content="pt_BR">
+
+  <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/cebf239a-42eb-4866-aab6-6a050f749d4b-loader.js" ></script>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
