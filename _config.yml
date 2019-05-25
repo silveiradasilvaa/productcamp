@@ -9,8 +9,8 @@
 title: 'Product Camp 2019'
 description: >
   'A maior conferência de Product Management da América Latina. Conteúdo alto nível e qualificado.'
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://www.productcamp.com.br" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
