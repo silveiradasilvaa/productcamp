@@ -61,6 +61,72 @@ layout: default
 </header>
 
 {% include components/highlights.html %}
+
+<section class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Sobre o evento</h2>
+      </div>
+      <div class="video-container">
+        <div class="about-text">
+          <p>O Product Camp é uma mega conferência onde pessoas do Brasil inteiro se reúnem para consumir conteúdo de qualidade em diferentes formatos, trocar experiências do "mundo real" e ampliar suas redes de contatos.</p>
+          <p>Os melhores cases e descobertas do ano culminam no Product Camp, que já se tornou um "feriado", sempre no início de dezembro, para quem faz produto e quer fazer isso cada vez melhor. É a maior conferência de Produto da América Latina, tanto em participantes quanto em tempo de conteúdo.</p>
+        </div>
+        <div class="col-lg-9 offset-lg-3">
+          <a href class="link-video video-btn" data-src="https://www.youtube.com/embed/3dVXEpjr430" data-toggle="modal" data-target="#modalVideo01">Vídeo Product Camp 2019</a>
+        </div>
+      </div>
+      <!-- <a class="link-video--testimonials-home video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/3dVXEpjr430" data-target="#modalTestimonial01">
+        <div class="video--testimonials-home granuta">
+          <p>Assista e descubra como a Granuta controla a sua produção com o Fácil123</p>
+        </div>
+      </a> -->
+    </div>
+  </div>
+</section>
+<section class="edition-2019">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-items-center justify-content-center">
+        <div class="title-edition2019">
+          <h2>Prepare-se para 2019</h2>
+          <p>Queremos subir a barra da gestão de produtos no Brasil. Fazer isso com profissionais que, por definição, já mantêm suas barras lá no topo não é fácil. Mas é a missão que assumimos!</p>
+          <p>A partir das avaliações e feedbacks das edições anteriores, planejamos um evento ainda melhor, com mais momentos de networking e conteúdos mais realistas, que possam ser aplicados à prática conforme o contexto do seu produto.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="content-edition2019">
+          <p>Serão três palcos simultâneos, espaço para +1000 pessoas, palestras internacionais, mesas redondas e debates para oferecer diversos pontos de vista e conteúdo sobre os temas mais prestigiados do momento na comunidade.</p>
+          <h3>Dia 10 de Dezembro</h3>
+          <p>Palco 1: Produto;</p>
+          <p>Palco 2: UX e Barcamp (espaço de discussões, AMA, Debates e mais)</p>
+          <h3>Dia 11 de Dezembro</h3>
+          <p>Palco 1: Produto;</p>
+          <p>Palco 2: Growth; Barcamp (espaço de discussões, AMA, Debates e mais)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade modal-video" id="modalVideo01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video01"  allowscriptaccess="always"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% include components/speakers.html %}
 {% include components/last-edition.html %}
 {% include components/tickets.html %}
